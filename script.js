@@ -296,7 +296,23 @@ if (slides.length) {
     nextButton.addEventListener("click", () => goToSlide(current + 1, 1));
     autoplayButton.addEventListener("click", () => setAutoplay(!autoplay));
     document.querySelectorAll("video").forEach((video) => {
-        video.addEventListener("play", () => setAutoplay(false));
+        const soundButton = video.parentElement.querySelector(".video-start");
+        const enableSound = () => {
+            video.defaultMuted = false;
+            video.muted = false;
+        };
+
+        video.removeAttribute("muted");
+        video.addEventListener("loadedmetadata", enableSound, { once: true });
+        video.addEventListener("play", () => {
+            enableSound();
+            soundButton?.classList.add("is-hidden");
+            setAutoplay(false);
+        });
+        soundButton?.addEventListener("click", () => {
+            enableSound();
+            video.play().catch(() => {});
+        });
     });
 
     document.addEventListener("keydown", (event) => {

@@ -49,7 +49,7 @@ a { color: inherit; text-decoration: none; }
 .timer strong { font-family: var(--serif); font-size: 29px; font-weight: 500; line-height: 1; font-variant-numeric: tabular-nums; }
 .timer small { color: #897979; font-size: 8px; letter-spacing: .08em; }
 .hero-actions { display: flex; align-items: center; gap: 31px; margin-top: 26px; }
-.primary-button { height: 54px; min-width: 246px; padding: 0 7px 0 23px; display: flex; align-items: center; justify-content: space-between; gap: 18px; border: 1px solid #ee2947; background: var(--red); color: white; font-size: 11px; font-weight: 600; letter-spacing: .06em; transition: .3s ease; }
+.primary-button { height: 54px; min-width: 246px; padding: 0 23px; display: flex; align-items: center; justify-content: center; gap: 18px; border: 1px solid #ee2947; background: var(--red); color: white; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-align: center; transition: .3s ease; }
 .primary-button:hover { background: #fa2647; box-shadow: 0 10px 42px rgba(225,25,55,.32); transform: translateY(-2px); }
 .button-arrow { display: grid; width: 39px; height: 39px; place-items: center; background: rgba(0,0,0,.2); font-size: 18px; }
 .text-button { border: 0; background: none; color: #d5c7c3; cursor: pointer; font-size: 10px; letter-spacing: .05em; transition: color .25s; }
@@ -102,10 +102,13 @@ a { color: inherit; text-decoration: none; }
 .slide-copy h2 { font-family: var(--serif); font-size: clamp(50px, 5vw, 82px); font-weight: 500; letter-spacing: -.035em; line-height: .84; }
 .slide-copy h2 em { display: block; margin-top: 10px; color: var(--red-bright); font-size: .8em; font-weight: 500; }
 .slide-copy p { margin-top: 31px; padding-left: 20px; border-left: 1px solid var(--red); color: #b7a8a7; font-family: var(--serif); font-size: 18px; font-style: italic; line-height: 1.55; }
-.video-container { height: min(67vh, 680px); display: grid; place-items: center; background: #0e090a; border: 1px solid var(--line); }
+.video-container { height: min(67vh, 680px); display: grid; place-items: center; position: relative; background: #0e090a; border: 1px solid var(--line); overflow: hidden; }
 .video-container video { width: 100%; height: 100%; object-fit: contain; background: #030202; }
 .letter-slide .video-container { height: min(56vh, 580px, calc(100vh - 250px)); }
 .letter-slide .video-container video { max-width: 100%; max-height: 100%; }
+.video-start { display: none; position: absolute; left: 50%; bottom: 18px; z-index: 2; padding: 12px 17px; border: 1px solid rgba(255,255,255,.3); background: rgba(8,4,5,.78); color: white; backdrop-filter: blur(10px); transform: translateX(-50%); cursor: pointer; white-space: nowrap; font-size: 10px; letter-spacing: .08em; }
+.video-start span { margin-right: 7px; color: var(--red-bright); }
+.video-start.is-hidden { display: none; }
 .slider-arrow { position: absolute; z-index: 10; top: 50%; width: 47px; height: 47px; border: 1px solid rgba(255,255,255,.17); border-radius: 50%; background: rgba(7,4,5,.48); backdrop-filter: blur(8px); cursor: pointer; font-size: 18px; transition: .25s; transform: translateY(-50%); }
 .slider-arrow:hover { border-color: var(--red-bright); background: var(--red); }
 .prev { left: clamp(5px, 2.5vw, 38px); }
@@ -161,7 +164,10 @@ a { color: inherit; text-decoration: none; }
     .photos img { max-height: 28vh; }
     .photos:has(img:only-child) img { height: min(53vh, 500px); object-fit: contain; background: #0c0809; }
     .video-container { height: min(48vh, 480px); }
-    .letter-slide .video-container { height: min(38vh, 360px, calc(100vh - 390px)); min-height: 210px; }
+    .letter-slide { grid-template-rows: auto auto; align-content: start; gap: 17px; padding-top: 14px; }
+    .letter-slide .video-container { width: min(100%, 430px); height: min(34dvh, 310px); min-height: 190px; margin: 0 auto; }
+    .letter-slide .slide-copy { width: min(100%, 430px); margin: 0 auto; }
+    .video-start { display: block; }
     .slide-copy { max-width: 100%; }
     .slide-copy h2 { font-size: 47px; }
     .slide-copy h2 em { display: inline; margin-left: 6px; }
