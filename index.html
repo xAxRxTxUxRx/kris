@@ -2,20 +2,55 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Для тебя ❤️</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#070405">
+    <meta name="description" content="Я люблю Кристину">
+    <title>Я люблю Кристину ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="main-page">
+    <div class="noise" aria-hidden="true"></div>
+    <canvas id="heart-canvas" aria-hidden="true"></canvas>
 
-<div class="container fade-in">
-    <h1>Ты делаешь меня счастливым ❤️</h1>
-    <p id="timer"></p>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="На главную"><span class="brand-mark">♥</span><span>Я люблю Кристину</span></a>
+        <div class="header-note">16.01.2026 — навсегда</div>
+    </header>
 
-    <button onclick="goToGallery()">Посмотреть наши моменты →</button>
-</div>
+    <main class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow"><span></span> история о нас двоих</p>
+            <h1>Ты делаешь<br>меня <em>счастливым</em></h1>
+            <p class="hero-subtitle">И каждый день рядом с тобой становится воспоминанием, которое хочется сохранить.</p>
 
-<script src="script.js"></script>
+            <section class="time-card" aria-label="Сколько времени мы вместе">
+                <div class="time-card-title">Мы вместе уже</div>
+                <div id="timer" class="timer" aria-live="polite">
+                    <span><strong>—</strong><small>дней</small></span><span><strong>—</strong><small>часов</small></span><span><strong>—</strong><small>минут</small></span><span><strong>—</strong><small>секунд</small></span>
+                </div>
+            </section>
+
+            <div class="hero-actions">
+                <a class="primary-button" href="gallery.html"><span>Открыть наши моменты</span><span class="button-arrow">↗</span></a>
+                <button class="text-button" id="love-note-button" type="button"><span class="tiny-heart">♥</span> Нажми, если скучаешь</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="love-note" id="love-note" role="dialog" aria-modal="true" aria-labelledby="love-note-title" hidden>
+        <button class="modal-close" type="button" aria-label="Закрыть">×</button>
+        <div class="love-note-heart">♥</div>
+        <p class="eyebrow centered"><span></span> только для тебя <span></span></p>
+        <h2 id="love-note-title">Ты — моё самое<br>любимое «навсегда»</h2>
+        <p id="love-note-text">С тобой даже самый обычный день становится особенным.</p>
+        <button class="shuffle-note" type="button">Ещё одно признание <span>♥</span></button>
+    </div>
+    <div class="modal-backdrop" hidden></div>
+
+    <footer class="main-footer"><span>Создано с любовью</span><span class="footer-line"></span><span>2026</span></footer>
+    <script src="script.js"></script>
 </body>
 </html>

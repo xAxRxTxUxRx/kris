@@ -2,156 +2,100 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Наши воспоминания</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#070405">
+    <meta name="description" content="Я люблю Кристину">
+    <title>Я люблю Кристину ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="gallery-page">
+    <div class="noise" aria-hidden="true"></div><div class="gallery-glow" aria-hidden="true"></div>
+    <header class="site-header gallery-header">
+        <a class="brand" href="index.html"><span class="brand-mark">♥</span><span>Я люблю Кристину</span></a>
+        <div class="gallery-counter"><strong id="current-number">01</strong><span>/</span><span id="total-number">16</span></div>
+    </header>
 
-<div class="slider">
-
-    <!-- 31 января -->
-    <div class="slide active">
-        <div class="photos">
-            <img src="images/31.01.26.jpg">
-            <img src="images/31.01.26_2.jpg">
+    <main class="gallery-shell">
+        <div class="slider" aria-live="polite">
+            <article class="slide active" data-label="31 янв">
+                <div class="photos"><img src="images/31.01.26.jpg" alt="Наше воспоминание 31 января" fetchpriority="high"><img src="images/31.01.26_2.jpg" alt="Наше воспоминание 31 января"></div>
+                <div class="slide-copy"><span class="moment-number">момент 01</span><h2>31 января <em>2026</em></h2><p>Первые фото тебя на мой телефон</p></div>
+            </article>
+            <article class="slide" data-label="19 фев">
+                <div class="photos"><img src="images/19.02.26.jpg" alt="Наше воспоминание 19 февраля" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 02</span><h2>19 февраля <em>2026</em></h2><p>Очень мило валялась</p></div>
+            </article>
+            <article class="slide" data-label="21 фев">
+                <div class="photos"><img src="images/21.02.26.jpg" alt="Зося" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 03</span><h2>21 февраля <em>2026</em></h2><p>Не мог не вставить сюда Зосю)</p></div>
+            </article>
+            <article class="slide" data-label="28 мар">
+                <div class="photos"><img src="images/28.03.26.jpg" alt="Поездка в Петербург" loading="lazy"><img src="images/28.03.26_2.jpg" alt="Поездка в Петербург" loading="lazy"><img src="images/28.03.26_3.jpg" alt="Первые фото в Петербурге" loading="lazy"><img src="images/28.03.26_4.jpg" alt="Первые фото в Петербурге" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 04</span><h2>28 марта <em>2026</em></h2><p>Выезжаем в Питер, пробиваем колесо на 200 км/ч — и делаем первые фото в городе</p></div>
+            </article>
+            <article class="slide" data-label="29 мар">
+                <div class="photos"><img src="images/29.03.26.jpg" alt="Прогулка по Петербургу" loading="lazy"><img src="images/29.03.26_2.jpg" alt="Прогулка по Петербургу" loading="lazy"><img src="images/29.03.26_3.jpg" alt="Прогулка по Петербургу" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 05</span><h2>29 марта <em>2026</em></h2><p>Продуктивно гуляем по Питеру</p></div>
+            </article>
+            <article class="slide" data-label="30 мар">
+                <div class="photos"><img src="images/30.03.26.jpg" alt="Завтрак в Петербурге" loading="lazy"><img src="images/30.03.26_2.jpg" alt="Поездка в Петергоф" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 06</span><h2>30 марта <em>2026</em></h2><p>Тот самый завтрак… и завершающая поездка в Петергоф</p></div>
+            </article>
+            <article class="slide" data-label="31 мар">
+                <div class="photos"><img src="images/31.03.26.jpg" alt="Наше воспоминание 31 марта" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 07</span><h2>31 марта <em>2026</em></h2><p>Только ради тебя вставил эту фотку</p></div>
+            </article>
+            <article class="slide" data-label="11 апр">
+                <div class="photos"><img src="images/11.04.26.jpg" alt="Вместе за чаем" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 08</span><h2>11 апреля <em>2026</em></h2><p>Чай не самый лучший, но каждый момент с тобой — счастливый</p></div>
+            </article>
+            <article class="slide letter-slide" data-label="письмо">
+                <div class="video-container"><video controls playsinline preload="metadata"><source src="images/19.02.26.mp4" type="video/mp4">Твоё устройство не поддерживает видео 😢</video></div>
+                <div class="slide-copy"><span class="moment-number">письмо тебе</span><h2>Мне с тобой <em>повезло</em></h2><p>Я безумно счастлив, что мы вместе. Ты умная, активная, красивая, милая, нежная, заботливая и весёлая. Люблю тебя.</p></div>
+            </article>
+            <article class="slide" data-label="16 мая">
+                <div class="photos"><img src="images/16.05.26.jpg" alt="Самодельный букет" loading="lazy"><img src="images/16.05.26_2.jpg" alt="Самодельный букет" loading="lazy"><img src="images/16.05.26_3.jpg" alt="Самодельный букет" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 10</span><h2>16 мая <em>2026</em></h2><p>Самодельный букет для моей любимой девушки</p></div>
+            </article>
+            <article class="slide" data-label="25 мая">
+                <div class="photos"><img src="images/25.05.26_2.jpg" alt="Красивые виды вместе" loading="lazy"><img src="images/25.05.26.jpg" alt="Красивые виды вместе" loading="lazy"><img src="images/25.05.26_3.jpg" alt="Красивые виды вместе" loading="lazy"><img src="images/25.05.26_4.jpg" alt="Красивые виды вместе" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 11</span><h2>25 мая <em>2026</em></h2><p>Красивые виды с самой красивой в мире девушкой</p></div>
+            </article>
+            <article class="slide" data-label="2 июн">
+                <div class="photos"><img src="images/02.06.26.jpg" alt="Лучший подарок" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 12</span><h2>2 июня <em>2026</em></h2><p>Лучший подарок, который мне делали. Мне очень приятно от того, как ты постаралась</p></div>
+            </article>
+            <article class="slide" data-label="16 июн">
+                <div class="photos"><img src="images/16.06.26.jpg" alt="Фото нашей пары" loading="lazy"><img src="images/16.06.26_2.jpg" alt="Фото нашей пары" loading="lazy"><img src="images/16.06.26_3.jpg" alt="Фото нашей пары" loading="lazy"><img src="images/16.06.26_4.jpg" alt="Фото нашей пары" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 13</span><h2>16 июня <em>2026</em></h2><p>Фото самой красивой пары</p></div>
+            </article>
+            <article class="slide" data-label="19 июл">
+                <div class="photos"><img src="images/19.07.26.jpg" alt="Наша совместная фотография в июле" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 14</span><h2>19 июля <em>2026</em></h2><p>Единственная совместная фотка в июле...</p></div>
+            </article>
+            <article class="slide" data-label="17 авг">
+                <div class="photos"><img src="images/17.08.26_1.jpg" alt="Наше воспоминание 17 августа" loading="lazy"><img src="images/17.08.26_2.jpg" alt="Наше воспоминание 17 августа" loading="lazy"><img src="images/17.08.26_3.jpg" alt="Наше воспоминание 17 августа" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 15</span><h2>17 августа <em>2026</em></h2><p>Да точно не загорится</p></div>
+            </article>
+            <article class="slide" data-label="18 сен">
+                <div class="photos"><img src="images/18.09.26.jpg" alt="Тотальный закуп 18 сентября" loading="lazy"></div>
+                <div class="slide-copy"><span class="moment-number">момент 16</span><h2>18 сентября <em>2026</em></h2><p>Тотальный закуп</p></div>
+            </article>
         </div>
-        <h2>31 января 2026</h2>
-        <p>Первые фото тебя на мой телефон</p>
-    </div>
-
-    <!-- 19 февраля -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/19.02.26.jpg">
+        <button class="slider-arrow prev" type="button" aria-label="Предыдущий момент">←</button>
+        <button class="slider-arrow next" type="button" aria-label="Следующий момент">→</button>
+        <div class="gallery-controls">
+            <button class="autoplay-toggle" type="button" aria-label="Остановить автопрокрутку"><span></span></button>
+            <div class="timeline" role="tablist" aria-label="Навигация по воспоминаниям"></div>
         </div>
-        <h2>19 февраля 2026</h2>
-        <p>Очень мило валялась</p>
+    </main>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+        <button class="lightbox-close" type="button" aria-label="Закрыть">×</button><img src="" alt="Фотография крупным планом"><p>Нажмите в любом месте, чтобы закрыть</p>
     </div>
-
-    <!-- 21 февраля -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/21.02.26.jpg">
-        </div>
-        <h2>21 февраля 2026</h2>
-        <p>Не мог не вставить сюда Зосю)</p>
-    </div>
-
-    <!-- 28 марта -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/28.03.26.jpg">
-            <img src="images/28.03.26_2.jpg">
-            <img src="images/28.03.26_3.jpg">
-            <img src="images/28.03.26_4.jpg">
-        </div>
-        <h2>28 марта 2026</h2>
-        <p>Тут мы и выезжаем в Питер, и пробили колесо на 200 км/ч, и первые фотки в Питере</p>
-    </div>
-
-    <!-- 29 марта -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/29.03.26.jpg">
-            <img src="images/29.03.26_2.jpg">
-            <img src="images/29.03.26_3.jpg">
-        </div>
-        <h2>29 марта 2026</h2>
-        <p>Продуктивно гуляем по Питеру</p>
-    </div>
-
-    <!-- 30 марта -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/30.03.26.jpg">
-            <img src="images/30.03.26_2.jpg">
-        </div>
-        <h2>30 марта 2026</h2>
-        <p>Тот самый завтрак... И завершающая поездка в Петергоф</p>
-    </div>
-
-    <!-- 31 марта -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/31.03.26.jpg">
-        </div>
-        <h2>31 марта 2026</h2>
-        <p>Только ради тебя вставил эту фотку.</p>
-    </div>
-
-    <!-- 11 апреля -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/11.04.26.jpg">
-        </div>
-        <h2>11 апреля 2026</h2>
-        <p>Чай не самый лучший, но каждый момент с тобой счастливый</p>
-    </div>
-
-    <div class="slide">
-        <div class="video-container">
-            <video controls playsinline>
-                <source src="images/19.02.26.mp4" type="video/mp4">
-<!--                <source src="images/19.02.26.MOV" type="video/quicktime">-->
-                Твоё устройство не поддерживает видео 😢
-            </video>
-        </div>
-
-        <h2>19 февраля 2026</h2>
-        <p>Мне с тобой очень повезло, я безумно счастлив, что мы вместе. Ты прекрасная во всем, ты Умная, Активная, Красивая, Милая, Нежная, Заботливая, Веселая, у тебя добротное чувство юмора, молодец... Люблю тебя</p>
-    </div>
-
-    <!-- 16 мая -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/16.05.26.jpg">
-            <img src="images/16.05.26_2.jpg">
-            <img src="images/16.05.26_3.jpg">
-        </div>
-        <h2>16 мая 2026</h2>
-        <p>Самодельный букет для моей любимой девушки</p>
-    </div>
-
-    <!-- 25 мая -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/25.05.26_2.jpg">
-            <img src="images/25.05.26.jpg">
-            <img src="images/25.05.26_3.jpg">
-            <img src="images/25.05.26_4.jpg">
-        </div>
-        <h2>25 мая 2026</h2>
-        <p>Красивые виды с самой красивой в мире девушкой</p>
-    </div>
-
-    <!-- 2 июня -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/02.06.26.jpg">
-        </div>
-        <h2>2 июня 2026</h2>
-        <p>Лучший подарок, что мне делали. Мне очень приятно от того, как ты постаралась</p>
-    </div>
-
-    <!-- 16 июня -->
-    <div class="slide">
-        <div class="photos">
-            <img src="images/16.06.26.jpg">
-            <img src="images/16.06.26_2.jpg">
-            <img src="images/16.06.26_3.jpg">
-            <img src="images/16.06.26_4.jpg">
-        </div>
-        <h2>16 июня 2026</h2>
-        <p>Фото самой красивой пары</p>
-    </div>
-
-    <button class="prev">←</button>
-    <button class="next">→</button>
-    <button class="home" onclick="goHome()">← На главную</button>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
